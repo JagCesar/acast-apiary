@@ -1,0 +1,242 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Acast
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Questions Collection [/questions]
+
+### List All Questions [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+
+### Create a New Question [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+            
+## Questions Collection [/loadEpisodeZero]
+
+### Load Episode 0 [GET]
+
++ Response 200 (application/json)
+
+        {
+  "author": "Kristoffer Triumf",
+  "modified": "2016-08-17T20:04:34.849Z",
+  "created": "2016-08-17T19:46:10.975Z",
+  "publishingDate": "2016-08-21T04:00:00Z",
+  "url": "-242-lindamisslikarlsson",
+  "tags": [
+    "miss",
+    "li",
+    "linda",
+    "karlsson",
+    "kristoffer",
+    "triumf"
+  ],
+  "image": "https://acastprod.blob.core.windows.net:443/media/v1/964df327-ef67-4420-bf84-78d56d3f7908/varvet-242-miss-li-irzbqt1e.jpg",
+  "duration": 5210.4080000000004,
+  "channel": {
+    "author": "Kristoffer Triumf",
+    "modified": "2016-08-30T19:11:15.874Z",
+    "exclusive": false,
+    "publishingDate": "2014-04-20T21:10:32Z",
+    "ownerName": "Kristoffer Triumf",
+    "url": "varvet",
+    "summary": "Kristoffer Triumf med en intressant gäst, så enkelt är det.",
+    "image": "https://acastprod.blob.core.windows.net:443/media/v1/bf4e5114-fe02-4088-9a07-c1b81a3c615a/varvet14001400.jpg",
+    "language": "sv",
+    "created": "2014-04-22T15:55:44.929Z",
+    "hidden": false,
+    "hosted": true,
+    "name": "Värvet",
+    "id": "bf4e5114-fe02-4088-9a07-c1b81a3c615a",
+    "ownerEmail": "varvet@triumf.se",
+    "subtitle": "Kristoffer Triumf, det vill säga jag, möter en gäst i veckan och en ganska lång intervju brukar uppstå. Håll till godo!  ",
+    "rating": "no",
+    "categories": [
+      "Business",
+      "Comedy",
+      "TV & Film"
+    ],
+    "description": "Kristoffer Triumf, det vill säga jag, möter en gäst i veckan och en ganska lång intervju brukar uppstå. Håll till godo!"
+  },
+  "blings": [
+    {
+      "start": 0,
+      "id": "8656ed4d-0cad-4087-a146-725f72e1d942",
+      "namespace": "com.acast.blings",
+      "duration": 5210.4080000000004,
+      "type": "BlingAudio",
+      "body": {
+        "media": "https://acastprod.blob.core.windows.net:443/media/v1/8656ed4d-0cad-4087-a146-725f72e1d942/-242missli-irzb6ig3.mp3"
+      },
+      "audio": "https://acastprod.blob.core.windows.net:443/media/v1/8656ed4d-0cad-4087-a146-725f72e1d942/-242missli-irzb6ig3.mp3"
+    },
+    {
+      "thumbnail": "https://acastprod.blob.core.windows.net:443/media/v1/1a301c85-ccf9-4439-b629-c3b5e17be10b/ska-rmavbild2016-08-17kl.21.56.23-irzbk15i.png",
+      "start": 713,
+      "id": "1a301c85-ccf9-4439-b629-c3b5e17be10b",
+      "namespace": "com.acast.blings",
+      "image": "https://acastprod.blob.core.windows.net:443/media/v1/1a301c85-ccf9-4439-b629-c3b5e17be10b/ska-rmavbild2016-08-17kl.21.56.23-irzbk15i.png",
+      "duration": 30,
+      "type": "BlingLink",
+      "body": {
+        "linkurl": "http://www.op.se/noje/musik/underkant-miss-li"
+      },
+      "url": "http://www.op.se/noje/musik/underkant-miss-li"
+    },
+    {
+      "start": 0,
+      "id": "84ef88e0-b452-40ec-bbf6-525f4ff5014a",
+      "placement": "preroll",
+      "count": 1,
+      "namespace": "de.adtech.blings",
+      "duration": 0,
+      "lostAdId": "123",
+      "type": "BlingAdtechAd",
+      "body": {
+        "placement": "preroll"
+      },
+      "minimizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102397/0//cc=2;vidAS=pre_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet",
+      "maximizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102396/0//cc=2;vidAS=pre_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+    },{
+      "start": 2605.2040000000002,
+      "id": "28522580-365d-48ad-a616-e93cf0a30e16",
+      "placement": "midroll",
+      "count": 2,
+      "namespace": "de.adtech.blings",
+      "duration": 0,
+      "lostAdId": "123",
+      "type": "BlingAdtechAd",
+      "body": {
+        "placement": "midroll"
+      },
+      "minimizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102397/0//cc=2;vidAS=mid_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=2;key=varvet",
+      "maximizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102396/0//cc=2;vidAS=mid_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=2;key=varvet"
+    },
+    {
+      "start": 5210.4080000000004,
+      "id": "f78ffd98-76d4-4de1-8320-ada7a2a67a33",
+      "placement": "postroll",
+      "count": 1,
+      "namespace": "de.adtech.blings",
+      "duration": 0,
+      "lostAdId": "123",
+      "type": "BlingAdtechAd",
+      "body": {
+        "placement": "postroll"
+      },
+      "minimizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102397/0//cc=2;vidAS=post_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet",
+      "maximizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102396/0//cc=2;vidAS=post_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+    },
+    {
+      "start": 0,
+      "id": "0637c1d0-7118-11e6-93aa-53eb95f35026",
+      "placement": "preroll",
+      "count": 1,
+      "namespace": "de.adtech.blings",
+      "duration": 0,
+      "lostAdId": "123",
+      "type": "BlingAdtechSponsor",
+      "vastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5567616/0//cc=2;vidAS=pre_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+    },
+    {
+      "start": 2605.2040000000002,
+      "id": "0637c1d1-7118-11e6-93aa-53eb95f35026",
+      "placement": "midroll",
+      "count": 1,
+      "namespace": "de.adtech.blings",
+      "duration": 0,
+      "lostAdId": "123",
+      "type": "BlingAdtechSponsor",
+      "vastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5567616/0//cc=2;vidAS=mid_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+    },
+    {
+      "start": 5210.4079000000002,
+      "id": "0637c1d2-7118-11e6-93aa-53eb95f35026",
+      "placement": "postroll",
+      "count": 1,
+      "namespace": "de.adtech.blings",
+      "duration": 0,
+      "lostAdId": "123",
+      "type": "BlingAdtechSponsor",
+      "vastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5567616/0//cc=2;vidAS=post_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+    }
+  ],
+  "hosted": true,
+  "name": "#242: Linda \"Miss Li\" Karlsson",
+  "id": "964df327-ef67-4420-bf84-78d56d3f7908",
+  "contentLength": 83366528,
+  "subtitle": "Det svåra tvåhundrafyrtioandra avsnittet med artisten och låtskrivaren Linda ‘Miss Li’ Karlsson. Vi pratade om Pokémon Go, att ta paus som artist, skriva och spela in ett album på en vecka, major-skivbolag, älskade ångestperioder, terapi, recensioner, styla artister, en enorm garderob, att skriva åt andra artister, kreativa dippar, att nedvärdera sig själv, Zlatan, att fira tioårsjubileum, Borlänge, Rihanna och givetvis en hel del om det historiska i ordet flegmatisk.\nSamtalsledare: Kristoffer Triumf.\nProducent: David Mehr.\nDistribution: Acast.",
+  "contentType": "audio/mpeg",
+  "lastPublished": "2016-08-17T20:04:35.17Z",
+  "rating": "no",
+  "channelId": "bf4e5114-fe02-4088-9a07-c1b81a3c615a",
+  "description": "Det svåra tvåhundrafyrtioandra avsnittet med artisten och låtskrivaren Linda ‘Miss Li’ Karlsson. Vi pratade om att ta paus som artist, skriva och spela in ett album på en vecka, major-skivbolag, älskade ångestperioder, terapi, recensioner, styla artister, en enorm garderob, att skriva åt andra artister, kreativa dippar, att nedvärdera sig själv, Zlatan, att fira tioårsjubileum, Borlänge, Rihanna och givetvis en hel del om det historiska i ordet flegmatisk.\nSamtalsledare: Kristoffer Triumf.\nProducent: David Mehr.\nDistribution: Acast."
+}
