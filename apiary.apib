@@ -2,7 +2,7 @@ FORMAT: 1A
 
 # Acast
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Here are some endpoints we use to validate our player logic
             
 ## Root collection [/]
 
@@ -88,8 +88,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
               "body": {
                 "placement": "preroll"
               },
-              "minimizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102397/0//cc=2;vidAS=pre_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet",
-              "maximizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102396/0//cc=2;vidAS=pre_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+              "minimizedVastUrl": "http://private-c2aeb-acast.apiary-mock.com/minVastAd",
+              "maximizedVastUrl": "http://private-c2aeb-acast.apiary-mock.com/maxVastAd"
             },{
               "start": 2605.2040000000002,
               "id": "28522580-365d-48ad-a616-e93cf0a30e16",
@@ -102,8 +102,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
               "body": {
                 "placement": "midroll"
               },
-              "minimizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102397/0//cc=2;vidAS=mid_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=2;key=varvet",
-              "maximizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102396/0//cc=2;vidAS=mid_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=2;key=varvet"
+              "minimizedVastUrl": "http://private-c2aeb-acast.apiary-mock.com/minVastAd",
+              "maximizedVastUrl": "http://private-c2aeb-acast.apiary-mock.com/maxVastAd"
             },
             {
               "start": 5210.4080000000004,
@@ -117,8 +117,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
               "body": {
                 "placement": "postroll"
               },
-              "minimizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102397/0//cc=2;vidAS=post_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet",
-              "maximizedVastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5102396/0//cc=2;vidAS=post_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+              "minimizedVastUrl": "http://private-c2aeb-acast.apiary-mock.com/minVastAd",
+              "maximizedVastUrl": "http://private-c2aeb-acast.apiary-mock.com/maxVastAd"
             },
             {
               "start": 0,
@@ -129,7 +129,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
               "duration": 0,
               "lostAdId": "123",
               "type": "BlingAdtechSponsor",
-              "vastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5567616/0//cc=2;vidAS=pre_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+              "vastUrl": "http://private-c2aeb-acast.apiary-mock.com/vastSpons"
             },
             {
               "start": 2605.2040000000002,
@@ -140,7 +140,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
               "duration": 0,
               "lostAdId": "123",
               "type": "BlingAdtechSponsor",
-              "vastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5567616/0//cc=2;vidAS=mid_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+              "vastUrl": "http://private-c2aeb-acast.apiary-mock.com/vastSpons"
             },
             {
               "start": 5210.4079000000002,
@@ -151,7 +151,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
               "duration": 0,
               "lostAdId": "123",
               "type": "BlingAdtechSponsor",
-              "vastUrl": "http://adserver.adtech.de/?advideo/3.0/1539.1/5567616/0//cc=2;vidAS=post_roll;vidRT=VAST;vidRTV=2.0.1;vidREG=companion_left:320x320:adxml;vidbreakNUM=1;key=varvet"
+              "vastUrl": "http://private-c2aeb-acast.apiary-mock.com/vastSpons"
             }
           ],
           "hosted": true,
@@ -291,7 +291,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 </Ad>
         </VAST>
 
-## Ad sponsor vast [/VastSpons]
+## Ad sponsor vast [/vastSpons]
 
 ### Load ad sponsor vast [GET]
 
